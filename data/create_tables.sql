@@ -1,8 +1,8 @@
 BEGIN;
 
-DROP TABLE IF EXISTS "quotes", "joke";
+DROP TABLE IF EXISTS "quote", "joke";
 
-CREATE TABLE "quotes" (
+CREATE TABLE "quote" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -23,7 +23,7 @@ COMMIT;
 
 BEGIN;
 
-INSERT INTO "quotes" ("description", "author") VALUES
+INSERT INTO "quote" ("description", "author") VALUES
 ('Travaillez dur à vous accomplir en développant vos capacités.', 'Sénèque'),
 ('La vie, c’est comme une bicyclette, il faut avancer pour ne pas perdre l’équilibre.', 'Albert Einstein'),
 ('Ils ne savaient pas que c’était impossible, alors ils l’ont fait.', 'Mark Twain'),
